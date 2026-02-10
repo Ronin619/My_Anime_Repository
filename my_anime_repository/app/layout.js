@@ -1,11 +1,12 @@
 "use client";
 import { Provider } from "react-redux";
+import store from "./store/configureStore";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
         <Provider store={store}>{children}</Provider>
       </body>
     </html>
