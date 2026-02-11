@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div>
+      <div className="homePageBackground">
         <Top10AnimeCardGrid />
       </div>
     </>

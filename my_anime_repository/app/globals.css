@@ -35,6 +35,37 @@ a {
   text-decoration: none;
 }
 
+.homePageBackground {
+  background-color: #0a0a0a;
+}
+
+.top10Grid {
+  max-width: 1000px;
+  padding: 20px;
+  margin: auto;
+  background-color: black;
+}
+
+.top10Title {
+  padding: auto;
+  text-align: center;
+  color: white;
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card {
+  height: 410px !important;
+  background-color: dodgerblue !important;
+}
+
+.card-body {
+  padding: 10px !important;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

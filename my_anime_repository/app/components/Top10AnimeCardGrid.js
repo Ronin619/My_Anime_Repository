@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useSelector } from "react-redux";
 
 export default function Top10AnimeCardGrid() {
@@ -5,24 +6,29 @@ export default function Top10AnimeCardGrid() {
 
   return (
     <>
-      <div className="row row-cols-1 row-cols-md-5 g-3">
-        {top10AnimeData.map((anime) => (
-          <div className="col" key={anime.id}>
-            <div className="card">
-              <img
-                src={anime.image}
-                className="card-img-top"
-                alt={anime.title}
-              />
-              <div className="card-body">
-                <h5 className="card-title">{anime.title}</h5>
-                <p className="card-text">Ranking: {anime.rank}</p>
-                <p className="card-text">Episodes: {anime.episodes}</p>
-                <p className="card-text">Year: {anime.year}</p>
+      <div className="top10Grid">
+        <h1 className="top10Title">Top 10 Anime</h1>
+        <div className="row row-cols-1 row-cols-md-5 g-3">
+          {top10AnimeData.map((anime) => (
+            <div className="col" key={anime.id}>
+              <div className="card">
+                <img
+                  src={anime.image}
+                  className="card-img-top"
+                  alt={anime.title}
+                />
+                <div className="card-body mb-0">
+                  <h5 className="card-title mb-0">{anime.title}</h5>
+                  <p className="card-text mb-0">Ranking: {anime.rank}</p>
+                  <p className="card-text mb-0">Episodes: {anime.episodes}</p>
+                  <p className="card-text mb-0">
+                    {anime.year ? `Year: ${anime.year}` : null}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );
