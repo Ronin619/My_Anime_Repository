@@ -19,7 +19,6 @@ export default function Top10AnimeCardGrid() {
                 />
                 <div className="card-body mb-0">
                   <h5 className="card-title mb-0">{anime.title}</h5>
-                  <p className="card-text mb-0">Ranking: {anime.rank}</p>
                   <p className="card-text mb-0">Episodes: {anime.episodes}</p>
                   <p className="card-text mb-0">
                     {anime.year ? `Year: ${anime.year}` : null}
