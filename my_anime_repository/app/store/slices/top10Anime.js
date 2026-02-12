@@ -17,7 +17,6 @@ export const fetchTop10AnimeData = createAsyncThunk(
         image: anime.images.jpg.image_url,
         episodes: anime.episodes,
         year: anime.year,
-        rank: anime.rank,
       };
 
       animeCards.push(animeInfo);
