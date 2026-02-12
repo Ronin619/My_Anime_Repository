@@ -36,14 +36,17 @@ a {
 }
 
 .homePageBackground {
-  background-color: #0a0a0a;
+  background-image: url("/images/anime-moon-landscape_23-2151645871.avif");
+  background-size: cover;
+  background-position: center;
+  padding-top: 20px;
 }
 
 .top10Grid {
   max-width: 1000px;
   padding: 20px;
   margin: auto;
-  background-color: black;
+  background-color: transparent;
 }
 
 .top10Title {
@@ -57,9 +60,26 @@ a {
   object-fit: cover;
 }
 
+.searched-Anime {
+  max-width: 400px;
+  max-height: 250px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.searched-img {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.card-body {
+  margin-left: 10px;
+  color: #ffffff !important;
+}
+
 .card {
   height: 410px !important;
-  background-color: dodgerblue !important;
+  background-color: darkblue !important;
 }
 
 .card-body {
