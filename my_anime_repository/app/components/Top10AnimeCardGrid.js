@@ -23,6 +23,7 @@ export default function Top10AnimeCardGrid() {
                   <p className="card-text mb-0">
                     {anime.year ? `Year: ${anime.year}` : null}
                   </p>
+                  <button className="add-Btn mb-0">Add</button>
                 </div>
               </div>
             </div>
