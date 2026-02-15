@@ -5,7 +5,19 @@ export default function AnimeSearcher({ fetchAnime }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetchAnime(searchAnime);
+    const trimmedAnime = searchAnime.trim();
+    if (!trimmedAnime) {
+      window.alert("Enter an anime name");
+      return;
+    }
+
+    const validInput = /^[a-zA-Z0-9 ]+$/.test(trimmedAnime);
+    if (!validInput) {
+      window.alert("Search must contain letters or numbers only");
+      return;
+    }
+
+    fetchAnime(trimmedAnime);
     setSearchAnime("");
   };
 
