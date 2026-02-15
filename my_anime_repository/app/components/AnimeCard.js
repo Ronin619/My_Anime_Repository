@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 
 export default function AnimeCard({ searchedAnime, watchListHandler }) {
   if (!searchedAnime) return null;
@@ -20,7 +21,11 @@ export default function AnimeCard({ searchedAnime, watchListHandler }) {
             {searchedAnime.year && (
               <p className="card-text mb-1">Year: {searchedAnime.year}</p>
             )}
-            <p className="card-text mb-4">Status: {searchedAnime.status}</p>
+            <p className="card-text mb-1">Status: {searchedAnime.status}</p>
+            <p className="card-text mb-4">
+              Description:{" "}
+              <em className="description-text">{searchedAnime.background}</em>
+            </p>
             <button
               className="add-Btn mb-0 border-1"
               onClick={() => watchListHandler(searchedAnime)}
