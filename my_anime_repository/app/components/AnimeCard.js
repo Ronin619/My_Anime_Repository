@@ -22,10 +22,14 @@ export default function AnimeCard({ searchedAnime, watchListHandler }) {
               <p className="card-text mb-1">Year: {searchedAnime.year}</p>
             )}
             <p className="card-text mb-1">Status: {searchedAnime.status}</p>
-            <p className="card-text mb-4">
-              Description:{" "}
-              <em className="description-text">{searchedAnime.background}</em>
-            </p>
+            {searchedAnime.background ? (
+              <p className="card-text mb-4">
+                {" "}
+                Description: (
+                <em className="description-text">{searchedAnime.background}</em>
+                ){" "}
+              </p>
+            ) : null}
             <button
               className="add-Btn mb-0 border-1"
               onClick={() => watchListHandler(searchedAnime)}
