@@ -1,3 +1,7 @@
+## App Description
+
+This app will allow users to search and display anime information. Users will also have the option to add an anime to a watch list. The top 10 anime list will also display on the home page every time a user visits.
+
 ## Tech Stack
 
 - JavaScript
