@@ -1,10 +1,9 @@
-import axios from "axios";
 import { createSlice } from "@reduxjs/toolkit";
 
 export const watchListSlice = createSlice({
   name: "watchList",
   initialState: {
-    watchList: [],
+    watchList: JSON.parse(localStorage.getItem("watchList")) || [],
   },
   reducers: {
     addToWatchList: (state, action) => {
@@ -12,11 +11,15 @@ export const watchListSlice = createSlice({
         !state.watchList.some((anime) => anime.title === action.payload.title)
       ) {
         state.watchList.push(action.payload);
-        console.log(state.watchList);
       }
+    },
+    deleteFromWatchList: (state, action) => {
+      state.watchList = state.watchList.filter(
+        (anime) => anime.img !== action.payload,
+      );
     },
   },
 });
 
-export const { addToWatchList } = watchListSlice.actions;
+export const { addToWatchList, deleteFromWatchList } = watchListSlice.actions;
 export default watchListSlice.reducer;
