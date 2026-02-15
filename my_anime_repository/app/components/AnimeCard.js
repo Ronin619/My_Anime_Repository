@@ -22,10 +22,10 @@ export default function AnimeCard({ searchedAnime, watchListHandler }) {
             )}
             <p className="card-text mb-4">Status: {searchedAnime.status}</p>
             <button
-              className="add-Btn mb-0"
+              className="add-Btn mb-0 border-1"
               onClick={() => watchListHandler(searchedAnime)}
             >
-              Add
+              <i class="bi bi-plus-circle-fill"></i>
             </button>
           </div>
         </div>

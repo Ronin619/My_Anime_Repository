@@ -24,12 +24,12 @@ export default function Top10AnimeCardGrid({ watchListHandler }) {
                     {anime.year ? `Year: ${anime.year}` : null}
                   </p>
                   <button
-                    className="add-Btn mb-0"
+                    className="add-Btn"
                     onClick={() => {
                       watchListHandler(anime);
                     }}
                   >
-                    Add
+                    <i className="bi bi-plus-circle-fill"></i>
                   </button>
                 </div>
               </div>
