@@ -20,6 +20,10 @@ export default function Home() {
     dispatch(fetchTop10AnimeData());
   }, [dispatch]);
 
+  useEffect(() => {
+    localStorage.setItem("watchList", JSON.stringify(watchList));
+  }, [watchList]);
+
   const fetchAnime = async (query) => {
     const ROOT_URL = "https://api.jikan.moe/v4/anime";
     const response = await axios.get(ROOT_URL, {
@@ -30,7 +34,6 @@ export default function Home() {
     });
     const animeData = response.data.data[0];
     setSearchedAnime(animeData);
-    console.log(animeData);
   };
 
   const watchListHandler = (anime) => {
